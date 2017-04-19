@@ -1,0 +1,113 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+    <style type="text/css">
+*{margin: 0;padding: 0;list-style: none;}
+#center{
+	width: 640px;height: 400px;position: absolute;left: 0;top: 0;right: 0;bottom: 0;margin: auto;border: 1px solid black;
+	overflow: hidden;
+	box-shadow: 0 0 5px black;
+	border-radius: 10px;
+}
+#center > ul{
+	transition:0.7s;
+	float: left;width: 400%;height: 100%;
+}
+#center > ul > li{
+	float: left;width: 25%;height: 100%;
+}
+#center > ol{
+	z-index: 2;
+	position: absolute;right: 0;bottom: 10px;
+}
+ol >li{
+	width: 20px;height: 20px;border-radius: 50%;text-align: center;line-height: 20px;background: white;border: 1px solid black;position: absolute;
+	transition:.3s;
+}
+#center > ol >li:nth-child(1){
+	right: 143px;top: -27px;
+}
+#center > ol >li:nth-child(2){
+	right: 103px;top: -27px;
+}
+#center > ol >li:nth-child(3){
+	right: 63px;top: -27px;
+}
+#center > ol >li:nth-child(4){
+	right: 23px;top: -27px;
+}
+input{position: absolute;right: 0;bottom: 20px;z-index: 10;opacity: 0;transform:scale(1.5);}
+input:nth-child(1){
+	right: 150px;
+}
+
+input:nth-child(2){
+	right: 110px;
+}
+
+input:nth-child(3){
+	right: 70px;
+}
+
+input:nth-child(4){
+	right: 30px;
+}
+input:nth-child(1):checked~ul{
+	transform:translateX(0%);
+}
+input:nth-child(1):checked~ol>li:nth-child(1){
+	transform:scale(1.2);
+	background: black;
+	color: white;
+}
+input:nth-child(2):checked~ol>li:nth-child(2){
+	transform:scale(1.2);
+	background: black;
+	color: white;
+}
+input:nth-child(3):checked~ol>li:nth-child(3){
+	transform:scale(1.2);
+	background: black;
+	color: white;
+}
+input:nth-child(4):checked~ol>li:nth-child(4){
+	transform:scale(1.2);
+	background: black;
+	color: white;
+}
+input:nth-child(2):checked~ul{
+	transform:translateX(-25%);
+}
+input:nth-child(3):checked~ul{
+	transform:translateX(-50%);
+}
+input:nth-child(4):checked~ul{
+	transform:translateX(-75%);
+}
+
+    </style>
+</head>
+<body>
+<div id='center'>
+	<input type='radio' name='leo' checked>
+	<input type='radio' name='leo'>
+	<input type='radio' name='leo'>
+	<input type='radio' name='leo'>
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ol>
+
+	<ul>
+		<li><img src="img/1.jpg"></li>
+		<li><img src="img/2.jpg"></li>
+		<li><img src="img/3.jpg"></li>
+		<li><img src="img/4.jpg"></li>
+	</ul>
+</div>
+</body>
+</html>
